@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F6D57"/>
+      <stop offset="100%" stop-color="#113A7D"/>
+    </linearGradient>
+  </defs>
+
+  <!-- White document body with folded corner on gradient bg -->
+  <path d="M96 32 h224 l96 96 v352 a32 32 0 0 1 -32 32 H128 a32 32 0 0 1 -32-32 V64 a32 32 0 0 1 32-32z"
+        fill="#FFFFFF"/>
+
+  <!-- Folded corner triangle -->
+  <path d="M320 32 v64 a32 32 0 0 0 32 32 h64z"
+        fill="#E0E5EA" opacity="0.6"/>
+
+  <!-- "Dr" monogram in brand green -->
+  <text x="232" y="310" text-anchor="middle"
+        font-family="'Avenir Next','Segoe UI',Helvetica,Arial,sans-serif"
+        font-weight="800" font-size="180" fill="#0F6D57"
+        letter-spacing="-4">Dr</text>
+
+  <!-- Circular rename arrow (bottom-right) -->
+  <g transform="translate(370, 400)">
+    <path d="M0-48 A48 48 0 1 1 -33.9-33.9"
+          fill="none" stroke="#0F6D57" stroke-width="10"
+          stroke-linecap="round"/>
+    <polygon points="-42,-22 -26,-42 -22,-26"
+             fill="#0F6D57"/>
+  </g>
+</svg>

@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProductivitySurge — Tools That Work While You Don't Have To</title>
+  <meta name="description" content="ProductivitySurge builds focused desktop tools that automate tedious file work — so you can reclaim hours every week." />
+  <meta name="keywords" content="productivity tools, file automation, document management, macOS utilities, ProductivitySurge" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ProductivitySurge — Tools That Work While You Don't Have To" />
+  <meta property="og:description" content="Focused desktop tools that automate tedious file work." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://productivitysurge.com" />
+  <meta property="og:image" content="https://productivitysurge.com/assets/og-brand.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ProductivitySurge — Tools That Work While You Don't Have To" />
+  <meta name="twitter:description" content="Focused desktop tools that automate tedious file work." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/docreclaimer/assets/logo/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/docreclaimer/assets/logo/favicon-32.png" />
+
+  <style>
+    /* ── Reset & Base ───────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand:    #0F6D57;
+      --brand-2:  #113A7D;
+      --bg:       #F2F5F8;
+      --panel:    #FFFFFF;
+      --text:     #12202F;
+      --muted:    #4B5D6E;
+      --border:   #CDD7E1;
+      --radius:   12px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── Buttons ────────────────────────────────────────────────── */
+    .btn {
+      display: inline-block; font-weight: 600; border-radius: 8px;
+      text-decoration: none; cursor: pointer; transition: .2s;
+    }
+    .btn-primary {
+      background: var(--brand); color: #FFFFFF; padding: 12px 32px; font-size: 15px;
+    }
+    .btn-primary:hover { background: #0b5a47; text-decoration: none; }
+    .btn-outline {
+      border: 2px solid var(--brand); color: var(--brand); padding: 10px 28px; font-size: 15px;
+      background: transparent;
+    }
+    .btn-outline:hover { background: var(--brand); color: #FFFFFF; text-decoration: none; }
+
+    /* ── Navigation ─────────────────────────────────────────────── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,.92); backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 960px; margin: 0 auto; padding: 14px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-brand {
+      font-weight: 700; font-size: 18px; color: var(--text);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-links a { color: var(--muted); font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: var(--text); text-decoration: none; }
+
+    /* ── Hero ───────────────────────────────────────────────────── */
+    .hero {
+      background: linear-gradient(135deg, #0F6D57, #113A7D);
+      padding: 80px 0 72px; text-align: center; color: #FFFFFF;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 48px); font-weight: 700;
+      line-height: 1.15; margin-bottom: 20px;
+    }
+    .hero .tagline {
+      font-size: clamp(16px, 2.5vw, 20px); opacity: 0.88;
+      max-width: 600px; margin: 0 auto 36px;
+    }
+    .hero .hero-cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .hero .btn-hero-primary {
+      background: #FFFFFF; color: var(--brand); padding: 14px 36px;
+      font-size: 16px; font-weight: 700; border-radius: 8px;
+    }
+    .hero .btn-hero-primary:hover { background: #e8f5f0; text-decoration: none; }
+    .hero .btn-hero-outline {
+      border: 2px solid rgba(255,255,255,0.6); color: #FFFFFF; padding: 12px 32px;
+      font-size: 16px; font-weight: 600; border-radius: 8px; background: transparent;
+    }
+    .hero .btn-hero-outline:hover { background: rgba(255,255,255,0.12); text-decoration: none; }
+
+    /* ── Mission ────────────────────────────────────────────────── */
+    .mission { padding: 72px 0; text-align: center; }
+    .mission h2 { font-size: 28px; margin-bottom: 16px; color: var(--text); }
+    .mission p { font-size: 17px; color: var(--muted); max-width: 620px; margin: 0 auto; }
+
+    /* ── Products Grid ──────────────────────────────────────────── */
+    .products { padding: 0 0 80px; }
+    .products h2 { font-size: 28px; text-align: center; margin-bottom: 48px; color: var(--text); }
+
+    .product-card {
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: var(--radius); overflow: hidden;
+      max-width: 720px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr;
+      transition: box-shadow .25s;
+    }
+    .product-card:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+    }
+    .product-card .card-visual {
+      background: linear-gradient(135deg, #0F6D57, #113A7D);
+      display: flex; align-items: center; justify-content: center;
+      padding: 40px; min-height: 260px;
+    }
+    .product-card .card-visual img {
+      width: 120px; height: 120px; border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+    .product-card .card-body {
+      padding: 36px 32px; display: flex; flex-direction: column; justify-content: center;
+    }
+    .product-card .card-body .badge {
+      display: inline-block; background: #e8f5f0; color: var(--brand);
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 4px; margin-bottom: 12px;
+      width: fit-content; letter-spacing: 0.5px;
+    }
+    .product-card .card-body h3 {
+      font-size: 22px; margin-bottom: 8px; color: var(--text);
+    }
+    .product-card .card-body .product-tagline {
+      font-size: 14px; color: var(--muted); margin-bottom: 16px;
+    }
+    .product-card .card-body ul {
+      list-style: none; margin-bottom: 20px;
+    }
+    .product-card .card-body ul li {
+      font-size: 14px; color: var(--text); padding: 3px 0;
+    }
+    .product-card .card-body ul li::before {
+      content: "✓ "; color: var(--brand); font-weight: 700;
+    }
+    .product-card .card-body .card-actions {
+      display: flex; gap: 12px; flex-wrap: wrap;
+    }
+
+    /* ── Values / Why Section ───────────────────────────────────── */
+    .values { padding: 72px 0; background: var(--panel); }
+    .values h2 { font-size: 28px; text-align: center; margin-bottom: 48px; color: var(--text); }
+    .values-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 32px; max-width: 840px; margin: 0 auto;
+    }
+    .value-item { text-align: center; }
+    .value-item .icon {
+      font-size: 36px; margin-bottom: 12px;
+    }
+    .value-item h3 { font-size: 17px; margin-bottom: 8px; color: var(--text); }
+    .value-item p { font-size: 14px; color: var(--muted); }
+
+    /* ── Newsletter / CTA ───────────────────────────────────────── */
+    .newsletter {
+      padding: 72px 0; text-align: center;
+    }
+    .newsletter h2 { font-size: 28px; margin-bottom: 12px; color: var(--text); }
+    .newsletter p { font-size: 16px; color: var(--muted); margin-bottom: 28px; }
+    .newsletter .cta-row {
+      display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+    }
+    .newsletter input[type="email"] {
+      padding: 12px 20px; font-size: 15px; border: 1px solid var(--border);
+      border-radius: 8px; width: 300px; outline: none; color: var(--text);
+      background: var(--panel);
+    }
+    .newsletter input[type="email"]:focus { border-color: var(--brand); }
+
+    /* ── Footer ─────────────────────────────────────────────────── */
+    footer {
+      background: #12202F; color: #a0adb8; padding: 28px 0;
+    }
+    .footer-inner {
+      max-width: 960px; margin: 0 auto; padding: 0 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 13px;
+    }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { color: #a0adb8; }
+    .footer-links a:hover { color: #ffffff; }
+
+    /* ── Responsive ─────────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .product-card { grid-template-columns: 1fr; }
+      .product-card .card-visual { min-height: 180px; padding: 32px; }
+      .values-grid { grid-template-columns: 1fr; gap: 28px; }
+    }
+    @media (max-width: 640px) {
+      .hero { padding: 56px 0 48px; }
+      .nav-links { gap: 14px; }
+      .newsletter input[type="email"] { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navigation ──────────────────────────────────────────── -->
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-brand" style="text-decoration:none">
+        ProductivitySurge
+      </a>
+      <div class="nav-links">
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="/docreclaimer" class="btn btn-primary" style="padding:8px 20px; font-size:13px;">DocReclaimer</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Hero ────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="container">
+      <h1>Tools that work while&nbsp;you&nbsp;don't&nbsp;have&nbsp;to</h1>
+      <p class="tagline">ProductivitySurge builds focused desktop tools that automate
+        tedious file work — so you can reclaim hours every week.</p>
+      <div class="hero-cta">
+        <a href="#products" class="btn-hero-primary">See Our Tools</a>
+        <a href="#about" class="btn-hero-outline">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Mission ─────────────────────────────────────────────── -->
+  <section class="mission">
+    <div class="container">
+      <h2>One tool. One job. Done right.</h2>
+      <p>We don't build bloated suites. Every ProductivitySurge tool solves one
+        specific, painful workflow — then gets out of your way.</p>
+    </div>
+  </section>
+
+  <!-- ── Products ────────────────────────────────────────────── -->
+  <section class="products" id="products">
+    <div class="container">
+      <h2>Our Products</h2>
+
+      <!-- DocReclaimer -->
+      <div class="product-card">
+        <div class="card-visual">
+          <img src="/docreclaimer/assets/logo/docrename-logo-light-256.png" alt="DocReclaimer logo" />
+        </div>
+        <div class="card-body">
+          <span class="badge">Available Now</span>
+          <h3>DocReclaimer</h3>
+          <p class="product-tagline">Rename smarter. Organize instantly.</p>
+          <ul>
+            <li>AI-powered document analysis</li>
+            <li>OCR for scanned PDFs &amp; images</li>
+            <li>Batch rename in one click</li>
+            <li>Smart templates &amp; auto-scan</li>
+            <li>Free to start — upgrade when you need more</li>
+          </ul>
+          <div class="card-actions">
+            <a href="/docreclaimer" class="btn btn-primary" style="padding:10px 24px; font-size:14px;">Learn More</a>
+            <a href="/docreclaimer/assets/downloads/DocReclaimer_Source_v2.1.0.dmg" class="btn btn-outline" style="padding:8px 20px; font-size:14px;" download>Download Free</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Placeholder for future products -->
+      <p style="text-align:center; color:var(--muted); font-size:14px; margin-top:48px;">
+        More tools coming soon. Stay tuned.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Values ──────────────────────────────────────────────── -->
+  <section class="values" id="about">
+    <div class="container">
+      <h2>Why ProductivitySurge?</h2>
+      <div class="values-grid">
+        <div class="value-item">
+          <div class="icon">⚡</div>
+          <h3>Focused &amp; Fast</h3>
+          <p>Each tool does one thing exceptionally well. No bloat, no learning curve.</p>
+        </div>
+        <div class="value-item">
+          <div class="icon">🔒</div>
+          <h3>Privacy First</h3>
+          <p>Your files never leave your machine. Zero cloud uploads, zero tracking.</p>
+        </div>
+        <div class="value-item">
+          <div class="icon">💰</div>
+          <h3>Fair Pricing</h3>
+          <p>Every tool is free to start. Pay only when you need more — no surprises.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Newsletter ──────────────────────────────────────────── -->
+  <section class="newsletter">
+    <div class="container">
+      <h2>Stay in the loop</h2>
+      <p>Get notified when we launch new tools. No spam, ever.</p>
+      <div class="cta-row">
+        <input type="email" placeholder="you@example.com" aria-label="Email address" />
+        <a href="#" class="btn btn-primary" style="padding:12px 28px;">Notify Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ──────────────────────────────────────────────── -->
+  <footer>
+    <div class="footer-inner">
+      <div>&copy; 2026 ProductivitySurge. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="/docreclaimer/privacy-policy.html">Privacy</a>
+        <a href="/docreclaimer/terms-of-service.html">Terms</a>
+        <a href="mailto:support@productivitysurge.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
