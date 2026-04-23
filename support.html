@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support | ProductivitySurge</title>
+  <meta name="description" content="Support resources for ProductivitySurge and DocReclaimer." />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #F2F5F8;
+      --panel: #FFFFFF;
+      --text: #12202F;
+      --muted: #4B5D6E;
+      --border: #CDD7E1;
+      --brand: #0F6D57;
+      --link: #0D4F9E;
+    }
+    body {
+      font-family: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 28px 16px 44px;
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+    }
+    h1 { font-size: 34px; color: var(--text); margin-bottom: 8px; }
+    h2 { font-size: 22px; color: var(--text); margin: 26px 0 10px; }
+    p { color: var(--text); margin-bottom: 10px; }
+    .meta { color: var(--muted); font-size: 14px; margin-bottom: 18px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 8px;
+    }
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+      background: #F9FBFD;
+    }
+    .card h3 { color: var(--text); font-size: 17px; margin-bottom: 6px; }
+    .card p { color: var(--muted); font-size: 14px; margin-bottom: 8px; }
+    a { color: var(--link); }
+    a:hover { color: #0A3C79; }
+    .cta-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--brand);
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+    .btn:hover { background: #0B5A47; color: #FFFFFF; }
+    .btn-outline {
+      display: inline-block;
+      border: 2px solid var(--brand);
+      color: var(--brand);
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-weight: 700;
+      background: #FFFFFF;
+    }
+    .btn-outline:hover { background: var(--brand); color: #FFFFFF; }
+    @media (max-width: 860px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Support</h1>
+    <p class="meta">ProductivitySurge support center for DocReclaimer and related products.</p>
+
+    <p>If you need help with setup, troubleshooting, licensing, or account workflows, use one of the options below.</p>
+
+    <section>
+      <h2>Get Help Fast</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Email Support</h3>
+          <p>For technical issues, account questions, or purchase support.</p>
+          <p><a href="mailto:support@productivitysurge.com">support@productivitysurge.com</a></p>
+        </article>
+        <article class="card">
+          <h3>Policy & Compliance</h3>
+          <p>Review legal and privacy terms used for procurement and approvals.</p>
+          <p><a href="/privacy-policy.html">Privacy Policy</a><br><a href="/terms-of-service.html">Terms of Service</a></p>
+        </article>
+        <article class="card">
+          <h3>Product Access</h3>
+          <p>Open the product page for docs, pricing, and download links.</p>
+          <p><a href="/docreclaimer/">DocReclaimer Landing Page</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>What To Include In A Support Request</h2>
+      <p>For faster resolution, include:</p>
+      <ul style="margin: 8px 0 12px 20px;">
+        <li>Operating system and app version</li>
+        <li>A short description of expected vs actual behavior</li>
+        <li>Steps to reproduce the issue</li>
+        <li>Error message text (if any)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Quick Actions</h2>
+      <div class="cta-row">
+        <a class="btn" href="mailto:support@productivitysurge.com?subject=DocReclaimer%20Support%20Request">Contact Support</a>
+        <a class="btn-outline" href="/">Back To Home</a>
+        <a class="btn-outline" href="/docreclaimer/">Open DocReclaimer</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
