@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ProductivitySurge — Tools That Work While You Don't Have To</title>
-  <meta name="description" content="ProductivitySurge builds focused desktop tools that automate tedious file work — so you can reclaim hours every week." />
+  <title>ProductivitySurge — Practical Automation For Real Work</title>
+  <meta name="description" content="ProductivitySurge builds practical automation tools for document-heavy teams. Cut manual file work, standardize naming, and move faster with less friction." />
   <meta name="keywords" content="productivity tools, file automation, document management, macOS utilities, ProductivitySurge" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="ProductivitySurge — Tools That Work While You Don't Have To" />
-  <meta property="og:description" content="Focused desktop tools that automate tedious file work." />
+  <meta property="og:title" content="ProductivitySurge — Practical Automation For Real Work" />
+  <meta property="og:description" content="Focused automation tools that remove repetitive file work for operations teams." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://productivitysurge.com" />
   <meta property="og:image" content="https://productivitysurge.com/assets/og-brand.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ProductivitySurge — Tools That Work While You Don't Have To" />
-  <meta name="twitter:description" content="Focused desktop tools that automate tedious file work." />
+  <meta name="twitter:title" content="ProductivitySurge — Practical Automation For Real Work" />
+  <meta name="twitter:description" content="Focused automation tools that remove repetitive file work for operations teams." />
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/docreclaimer/assets/logo/favicon.svg" />
@@ -32,9 +32,11 @@
       --brand-2:  #113A7D;
       --bg:       #F2F5F8;
       --panel:    #FFFFFF;
+      --panel-alt:#E8EEF5;
       --text:     #12202F;
       --muted:    #4B5D6E;
       --border:   #CDD7E1;
+      --accent:   #7D3C13;
       --radius:   12px;
     }
 
@@ -50,7 +52,7 @@
     a { color: var(--brand); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
-    .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 
     /* ── Buttons ────────────────────────────────────────────────── */
     .btn {
@@ -98,7 +100,7 @@
     /* ── Hero ───────────────────────────────────────────────────── */
     .hero {
       background: linear-gradient(135deg, #0F6D57, #113A7D);
-      padding: 80px 0 72px; text-align: center; color: #FFFFFF;
+      padding: 88px 0 76px; text-align: center; color: #FFFFFF;
     }
     .hero h1 {
       font-size: clamp(28px, 5vw, 48px); font-weight: 700;
@@ -120,10 +122,74 @@
     }
     .hero .btn-hero-outline:hover { background: rgba(255,255,255,0.12); text-decoration: none; }
 
+    /* ── Signal Band ────────────────────────────────────────────── */
+    .signal-band {
+      background: var(--panel);
+      border-bottom: 1px solid var(--border);
+      border-top: 1px solid var(--border);
+      padding: 24px 0;
+    }
+    .signal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+    .signal-card {
+      background: var(--panel-alt);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      text-align: left;
+    }
+    .signal-card .num {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .signal-card .lbl {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
     /* ── Mission ────────────────────────────────────────────────── */
-    .mission { padding: 72px 0; text-align: center; }
-    .mission h2 { font-size: 28px; margin-bottom: 16px; color: var(--text); }
-    .mission p { font-size: 17px; color: var(--muted); max-width: 620px; margin: 0 auto; }
+    .mission { padding: 76px 0 64px; text-align: center; }
+    .mission h2 { font-size: 32px; margin-bottom: 16px; color: var(--text); }
+    .mission p { font-size: 18px; color: var(--muted); max-width: 720px; margin: 0 auto; }
+
+    /* ── Use Cases ──────────────────────────────────────────────── */
+    .use-cases {
+      padding: 0 0 80px;
+    }
+    .use-cases h2 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 38px;
+      color: var(--text);
+    }
+    .use-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .use-item {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+    }
+    .use-item h3 {
+      color: var(--text);
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .use-item p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
 
     /* ── Products Grid ──────────────────────────────────────────── */
     .products { padding: 0 0 80px; }
@@ -132,7 +198,7 @@
     .product-card {
       background: var(--panel); border: 1px solid var(--border);
       border-radius: var(--radius); overflow: hidden;
-      max-width: 720px; margin: 0 auto;
+      max-width: 980px; margin: 0 auto;
       display: grid; grid-template-columns: 1fr 1fr;
       transition: box-shadow .25s;
     }
@@ -156,6 +222,65 @@
       font-size: 11px; font-weight: 700; text-transform: uppercase;
       padding: 4px 10px; border-radius: 4px; margin-bottom: 12px;
       width: fit-content; letter-spacing: 0.5px;
+    }
+
+    .product-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+    .meta-chip {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #EAF3FB;
+      color: #123A63;
+      border: 1px solid #B8D3EC;
+    }
+
+    /* ── Process Section ────────────────────────────────────────── */
+    .process {
+      padding: 74px 0;
+      background: var(--panel);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .process h2 {
+      font-size: 28px;
+      text-align: center;
+      color: var(--text);
+      margin-bottom: 34px;
+    }
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .process-step {
+      background: var(--panel-alt);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .process-step .step {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 6px;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+    .process-step h3 {
+      font-size: 16px;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .process-step p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
     }
     .product-card .card-body h3 {
       font-size: 22px; margin-bottom: 8px; color: var(--text);
@@ -192,19 +317,17 @@
 
     /* ── Newsletter / CTA ───────────────────────────────────────── */
     .newsletter {
-      padding: 72px 0; text-align: center;
+      padding: 78px 0; text-align: center;
     }
     .newsletter h2 { font-size: 28px; margin-bottom: 12px; color: var(--text); }
     .newsletter p { font-size: 16px; color: var(--muted); margin-bottom: 28px; }
     .newsletter .cta-row {
       display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
     }
-    .newsletter input[type="email"] {
-      padding: 12px 20px; font-size: 15px; border: 1px solid var(--border);
-      border-radius: 8px; width: 300px; outline: none; color: var(--text);
-      background: var(--panel);
+
+    .newsletter .cta-row .btn {
+      min-width: 220px;
     }
-    .newsletter input[type="email"]:focus { border-color: var(--brand); }
 
     /* ── Footer ─────────────────────────────────────────────────── */
     footer {
@@ -224,11 +347,16 @@
       .product-card { grid-template-columns: 1fr; }
       .product-card .card-visual { min-height: 180px; padding: 32px; }
       .values-grid { grid-template-columns: 1fr; gap: 28px; }
+      .signal-grid { grid-template-columns: repeat(2, 1fr); }
+      .use-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 640px) {
       .hero { padding: 56px 0 48px; }
       .nav-links { gap: 14px; }
-      .newsletter input[type="email"] { width: 100%; }
+      .signal-grid { grid-template-columns: 1fr; }
+      .process-grid { grid-template-columns: 1fr; }
+      .newsletter .cta-row .btn { width: 100%; }
     }
   </style>
 </head>
@@ -243,6 +371,7 @@
       <div class="nav-links">
         <a href="#products">Products</a>
         <a href="#about">About</a>
+        <a href="/support.html">Support</a>
         <a href="/docreclaimer" class="btn btn-primary" style="padding:8px 20px; font-size:13px;">DocReclaimer</a>
       </div>
     </div>
@@ -251,22 +380,66 @@
   <!-- ── Hero ────────────────────────────────────────────────── -->
   <section class="hero">
     <div class="container">
-      <h1>Tools that work while&nbsp;you&nbsp;don't&nbsp;have&nbsp;to</h1>
-      <p class="tagline">ProductivitySurge builds focused desktop tools that automate
-        tedious file work — so you can reclaim hours every week.</p>
+      <h1>Practical automation for
+        document-heavy teams</h1>
+      <p class="tagline">ProductivitySurge builds focused tools that remove repetitive file operations,
+        standardize workflows, and help teams reclaim meaningful time each week.</p>
       <div class="hero-cta">
-        <a href="#products" class="btn-hero-primary">See Our Tools</a>
-        <a href="#about" class="btn-hero-outline">Learn More</a>
+        <a href="#products" class="btn-hero-primary">Explore Products</a>
+        <a href="/docreclaimer" class="btn-hero-outline">Launch DocReclaimer</a>
       </div>
+    </div>
+  </section>
+
+  <!-- ── Signal Band ─────────────────────────────────────────── -->
+  <section class="signal-band" aria-label="Impact highlights">
+    <div class="container signal-grid">
+      <article class="signal-card">
+        <div class="num">1 Focus</div>
+        <div class="lbl">Each product solves one painful workflow without unnecessary overhead.</div>
+      </article>
+      <article class="signal-card">
+        <div class="num">100% Local</div>
+        <div class="lbl">Core document processing stays on your machine for privacy-first operations.</div>
+      </article>
+      <article class="signal-card">
+        <div class="num">Batch-Ready</div>
+        <div class="lbl">Built for real folders and real workloads, not toy examples.</div>
+      </article>
+      <article class="signal-card">
+        <div class="num">Operator UX</div>
+        <div class="lbl">Clear status, dry-run safety, and predictable outcomes for every run.</div>
+      </article>
     </div>
   </section>
 
   <!-- ── Mission ─────────────────────────────────────────────── -->
   <section class="mission">
     <div class="container">
-      <h2>One tool. One job. Done right.</h2>
-      <p>We don't build bloated suites. Every ProductivitySurge tool solves one
-        specific, painful workflow — then gets out of your way.</p>
+      <h2>One product, one problem, one clear win</h2>
+      <p>We do not ship bloated software suites. We build focused tools for operational
+        teams that need reliable automation, transparent behavior, and fast onboarding.</p>
+    </div>
+  </section>
+
+  <!-- ── Use Cases ───────────────────────────────────────────── -->
+  <section class="use-cases" id="about">
+    <div class="container">
+      <h2>Where teams use ProductivitySurge</h2>
+      <div class="use-grid">
+        <article class="use-item">
+          <h3>Finance & Administration</h3>
+          <p>Normalize invoices, statements, and expense records without hand-renaming every file.</p>
+        </article>
+        <article class="use-item">
+          <h3>Project Operations</h3>
+          <p>Keep shared folders organized with consistent naming conventions across deliverables.</p>
+        </article>
+        <article class="use-item">
+          <h3>Compliance Workflows</h3>
+          <p>Create repeatable naming and retention patterns that make downstream audits easier.</p>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -284,6 +457,11 @@
           <span class="badge">Available Now</span>
           <h3>DocReclaimer</h3>
           <p class="product-tagline">Rename smarter. Organize instantly.</p>
+          <div class="product-meta" aria-label="Product metadata">
+            <span class="meta-chip">macOS</span>
+            <span class="meta-chip">OCR-Enabled</span>
+            <span class="meta-chip">Free Tier + Pro</span>
+          </div>
           <ul>
             <li>AI-powered document analysis</li>
             <li>OCR for scanned PDFs &amp; images</li>
@@ -293,7 +471,7 @@
           </ul>
           <div class="card-actions">
             <a href="/docreclaimer" class="btn btn-primary" style="padding:10px 24px; font-size:14px;">Learn More</a>
-            <a href="https://github.com/dlloyd1977/productivitysurge.github.io/releases/download/docreclaimer-v2.1.0/DocReclaimer_v2.1.0.dmg" class="btn btn-outline" style="padding:8px 20px; font-size:14px;" download>Download Free</a>
+            <a href="https://github.com/dlloyd1977/productivitysurge.github.io/releases/download/docreclaimer-v2.3.2/DocReclaimer_v2.3.2.dmg" class="btn btn-outline" style="padding:8px 20px; font-size:14px;" download>Download Free</a>
           </div>
         </div>
       </div>
@@ -302,6 +480,35 @@
       <p style="text-align:center; color:var(--muted); font-size:14px; margin-top:48px;">
         More tools coming soon. Stay tuned.
       </p>
+    </div>
+  </section>
+
+  <!-- ── Process ─────────────────────────────────────────────── -->
+  <section class="process" aria-label="Delivery process">
+    <div class="container">
+      <h2>How we ship practical automation</h2>
+      <div class="process-grid">
+        <article class="process-step">
+          <div class="step">Step 1</div>
+          <h3>Map the friction</h3>
+          <p>We identify repetitive operations and define a narrow, high-impact scope.</p>
+        </article>
+        <article class="process-step">
+          <div class="step">Step 2</div>
+          <h3>Design for operators</h3>
+          <p>UX and controls prioritize clarity, safety, and deterministic outcomes.</p>
+        </article>
+        <article class="process-step">
+          <div class="step">Step 3</div>
+          <h3>Validate with smoke checks</h3>
+          <p>We verify core paths so each release is stable under realistic usage.</p>
+        </article>
+        <article class="process-step">
+          <div class="step">Step 4</div>
+          <h3>Iterate from real work</h3>
+          <p>Enhancements are driven by actual workflows, not generic feature lists.</p>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -332,11 +539,12 @@
   <!-- ── Newsletter ──────────────────────────────────────────── -->
   <section class="newsletter">
     <div class="container">
-      <h2>Stay in the loop</h2>
-      <p>Get notified when we launch new tools. No spam, ever.</p>
+      <h2>Need support or policy details?</h2>
+      <p>Use our support center for help requests, and review legal pages before rollout in your environment.</p>
       <div class="cta-row">
-        <input type="email" placeholder="you@example.com" aria-label="Email address" />
-        <a href="#" class="btn btn-primary" style="padding:12px 28px;">Notify Me</a>
+        <a href="/support.html" class="btn btn-primary" style="padding:12px 28px;">Open Support</a>
+        <a href="/privacy-policy.html" class="btn btn-outline" style="padding:12px 28px;">Privacy Policy</a>
+        <a href="/terms-of-service.html" class="btn btn-outline" style="padding:12px 28px;">Terms of Service</a>
       </div>
     </div>
   </section>
@@ -346,8 +554,9 @@
     <div class="footer-inner">
       <div>&copy; 2026 ProductivitySurge. All rights reserved.</div>
       <div class="footer-links">
-        <a href="/docreclaimer/privacy-policy.html">Privacy</a>
-        <a href="/docreclaimer/terms-of-service.html">Terms</a>
+        <a href="/privacy-policy.html">Privacy</a>
+        <a href="/terms-of-service.html">Terms</a>
+        <a href="/support.html">Support</a>
         <a href="mailto:support@productivitysurge.com">Contact</a>
       </div>
     </div>
