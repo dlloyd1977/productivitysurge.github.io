@@ -12,7 +12,7 @@
   <meta property="og:description" content="Focused automation tools that remove repetitive file work for operations teams." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://productivitysurge.com" />
-  <meta property="og:image" content="https://productivitysurge.com/assets/og-brand.png" />
+  <meta property="og:image" content="https://productivitysurge.com/docreclaimer/assets/homepage/hero/ps__app-docreclaimer__surface-root-home__usage-og__content-primary__ratio-16x9__size-xl__dim-1672x941.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -20,8 +20,7 @@
   <meta name="twitter:description" content="Focused automation tools that remove repetitive file work for operations teams." />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/docreclaimer/assets/logo/favicon.svg" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/docreclaimer/assets/logo/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/docreclaimer/assets/homepage/brand/ps__app-productivitysurge__surface-root-home__usage-favicon__content-primary__ratio-1x1__size-xs__dim-32x32.png" />
 
   <style>
     /* ── Reset & Base ───────────────────────────────────────────── */
@@ -159,6 +158,43 @@
     .mission h2 { font-size: 32px; margin-bottom: 16px; color: var(--text); }
     .mission p { font-size: 18px; color: var(--muted); max-width: 720px; margin: 0 auto; }
 
+    /* ── Brand Gallery ───────────────────────────────────────────── */
+    .brand-gallery {
+      padding: 0 0 84px;
+    }
+    .brand-gallery h2 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+    .brand-gallery .subhead {
+      text-align: center;
+      color: var(--muted);
+      font-size: 15px;
+      margin: 0 auto 34px;
+      max-width: 700px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .gallery-item {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .gallery-item img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #DDE7F0;
+    }
+
     /* ── Use Cases ──────────────────────────────────────────────── */
     .use-cases {
       padding: 0 0 80px;
@@ -195,12 +231,20 @@
     .products { padding: 0 0 80px; }
     .products h2 { font-size: 28px; text-align: center; margin-bottom: 48px; color: var(--text); }
 
+    .product-stack {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
     .product-card {
       background: var(--panel); border: 1px solid var(--border);
       border-radius: var(--radius); overflow: hidden;
       max-width: 980px; margin: 0 auto;
       display: grid; grid-template-columns: 1fr 1fr;
       transition: box-shadow .25s;
+    }
+    .product-card + .product-card {
+      margin-top: 24px;
     }
     .product-card:hover {
       box-shadow: 0 8px 32px rgba(0,0,0,0.08);
@@ -211,7 +255,9 @@
       padding: 40px; min-height: 260px;
     }
     .product-card .card-visual img {
-      width: 120px; height: 120px; border-radius: 20px;
+      width: min(100%, 420px);
+      height: auto;
+      border-radius: 14px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.25);
     }
     .product-card .card-body {
@@ -348,6 +394,7 @@
       .product-card .card-visual { min-height: 180px; padding: 32px; }
       .values-grid { grid-template-columns: 1fr; gap: 28px; }
       .signal-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
       .use-grid { grid-template-columns: 1fr; }
       .process-grid { grid-template-columns: repeat(2, 1fr); }
     }
@@ -355,6 +402,7 @@
       .hero { padding: 56px 0 48px; }
       .nav-links { gap: 14px; }
       .signal-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
       .process-grid { grid-template-columns: 1fr; }
       .newsletter .cta-row .btn { width: 100%; }
     }
@@ -422,6 +470,43 @@
     </div>
   </section>
 
+  <!-- ── Brand Gallery ────────────────────────────────────────── -->
+  <section class="brand-gallery" aria-label="ProductivitySurge visual gallery">
+    <div class="container">
+      <h2>Brand visuals from our latest image set</h2>
+      <p class="subhead">A curated set of ProductivitySurge assets now powers the homepage from a dedicated canonical folder with stable filenames.</p>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="/docreclaimer/assets/homepage/hero/ps__app-docreclaimer__surface-root-home__usage-hero__content-primary__ratio-16x9__size-xl__dim-1672x941.png" alt="ProductivitySurge hero visual" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="gallery-item">
+          <img src="/docreclaimer/assets/homepage/gallery/ps__app-docreclaimer__surface-root-home__usage-gallery__content-mark-square-01__ratio-1x1__size-lg__dim-1254x1254.png" alt="ProductivitySurge square brand mark concept 1" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="gallery-item">
+          <img src="/docreclaimer/assets/homepage/gallery/ps__app-docreclaimer__surface-root-home__usage-gallery__content-mark-square-02__ratio-1x1__size-lg__dim-1254x1254.png" alt="ProductivitySurge square brand mark concept 2" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="gallery-item">
+          <img src="/docreclaimer/assets/homepage/gallery/ps__app-docreclaimer__surface-root-home__usage-gallery__content-mark-square-03__ratio-1x1__size-lg__dim-1254x1254.png" alt="ProductivitySurge square brand mark concept 3" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="gallery-item">
+          <img src="/docreclaimer/assets/homepage/gallery/ps__app-docreclaimer__surface-root-home__usage-gallery__content-box-01__ratio-4x3__size-lg__dim-1448x1086.png" alt="ProductivitySurge branded box mockup 1" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="gallery-item">
+          <img src="/docreclaimer/assets/homepage/gallery/ps__app-docreclaimer__surface-root-home__usage-gallery__content-box-02__ratio-4x3__size-lg__dim-1448x1086.png" alt="ProductivitySurge branded box mockup 2" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="gallery-item">
+          <img src="/docreclaimer/assets/homepage/gallery/ps__app-docreclaimer__surface-root-home__usage-gallery__content-box-03__ratio-4x3__size-lg__dim-1448x1086.png" alt="ProductivitySurge branded box mockup 3" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="gallery-item">
+          <img src="/docreclaimer/assets/homepage/gallery/ps__app-docreclaimer__surface-root-home__usage-gallery__content-box-04__ratio-4x3__size-lg__dim-1448x1086.png" alt="ProductivitySurge branded box mockup 4" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="gallery-item">
+          <img src="/docreclaimer/assets/homepage/gallery/ps__app-productivitysurge__surface-root-home__usage-gallery__content-box-05__ratio-4x3__size-lg__dim-1448x1086.png" alt="ProductivitySurge branded box mockup 5" loading="lazy" decoding="async" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- ── Use Cases ───────────────────────────────────────────── -->
   <section class="use-cases" id="about">
     <div class="container">
@@ -447,11 +532,12 @@
   <section class="products" id="products">
     <div class="container">
       <h2>Our Products</h2>
+      <div class="product-stack">
 
       <!-- DocReclaimer -->
       <div class="product-card">
         <div class="card-visual">
-          <img src="/docreclaimer/assets/logo/docreclaimer-logo-light-256.png" alt="DocReclaimer logo" />
+          <img src="/docreclaimer/assets/homepage/products/ps__app-docreclaimer__surface-root-home__usage-logo__content-primary-light__ratio-1x1__size-sm__dim-256x256.png" alt="DocReclaimer logo" />
         </div>
         <div class="card-body">
           <span class="badge">Available Now</span>
@@ -474,6 +560,35 @@
             <a href="https://github.com/dlloyd1977/productivitysurge.github.io/releases/download/docreclaimer-v2.3.2/DocReclaimer_v2.3.2.dmg" class="btn btn-outline" style="padding:8px 20px; font-size:14px;" download>Download Free</a>
           </div>
         </div>
+      </div>
+
+      <!-- Empty Folder Manager -->
+      <div class="product-card">
+        <div class="card-visual">
+          <img src="/docreclaimer/assets/homepage/products/ps__app-empty-folder-manager__surface-root-home__usage-logo__content-primary__ratio-1x1__size-lg__dim-1254x1254.png" alt="Empty Folder Manager logo by ProductivitySurge" loading="lazy" decoding="async" />
+        </div>
+        <div class="card-body">
+          <span class="badge">In Preview</span>
+          <h3>Empty Folder Manager</h3>
+          <p class="product-tagline">Safe cleanup for smarter storage.</p>
+          <div class="product-meta" aria-label="Product metadata">
+            <span class="meta-chip">macOS</span>
+            <span class="meta-chip">Storage Utility</span>
+            <span class="meta-chip">Safety-First Deletes</span>
+          </div>
+          <ul>
+            <li>Detect and review empty folders before deletion</li>
+            <li>Tag-based workflows for controlled cleanup passes</li>
+            <li>Reporting views for transparent maintenance actions</li>
+            <li>Designed for confidence and repeatable folder hygiene</li>
+          </ul>
+          <div class="card-actions">
+            <a href="/support.html" class="btn btn-primary" style="padding:10px 24px; font-size:14px;">Request Early Access</a>
+            <a href="/docreclaimer/assets/homepage/products/ps__app-empty-folder-manager__surface-root-home__usage-poster__content-primary__ratio-9x16__size-xl__dim-941x1672.png" class="btn btn-outline" style="padding:8px 20px; font-size:14px;">View Preview</a>
+          </div>
+        </div>
+      </div>
+
       </div>
 
       <!-- Placeholder for future products -->
