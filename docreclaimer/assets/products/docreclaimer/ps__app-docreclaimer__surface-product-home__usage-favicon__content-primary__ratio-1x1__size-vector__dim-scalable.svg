@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="favGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F6D57"/>
+      <stop offset="100%" stop-color="#113A7D"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="6" fill="url(#favGrad)"/>
+  <text x="16" y="23" text-anchor="middle"
+        font-family="'Avenir Next','Segoe UI',Helvetica,Arial,sans-serif"
+        font-weight="800" font-size="17" fill="#FFFFFF"
+        letter-spacing="-0.5">Dr</text>
+</svg>
