@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Markdown AI — Write. Preview. Stay Local. | ProductivitySurge</title>
+  <meta name="description" content="Focused macOS markdown editor with side-by-side live preview, Mermaid diagrams, Quick Open, and optional local AI agent. Your files stay on your Mac." />
+  <meta name="keywords" content="markdown editor, macOS, live preview, mermaid, documentation, writing, ProductivitySurge" />
+
+  <meta property="og:title" content="Markdown AI — Write. Preview. Stay Local." />
+  <meta property="og:description" content="Side-by-side markdown editing and live preview for macOS. Sandboxed, privacy-first, with optional local AI." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://productivitysurge.com/markdown-ai" />
+  <meta property="og:image" content="https://productivitysurge.com/markdown-ai/assets/logo.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Markdown AI — Write. Preview. Stay Local." />
+  <meta name="twitter:description" content="Focused macOS markdown editor with live preview and optional local AI." />
+
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand:    #0E7490;
+      --brand-2:  #155E75;
+      --bg:       #F0F9FB;
+      --panel:    #FFFFFF;
+      --text:     #0C4A6E;
+      --muted:    #0369A1;
+      --border:   #BAE6FD;
+      --ok:       #0F766E;
+      --radius:   12px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 1100px; margin: 0 auto; padding: 12px 24px;
+    }
+    .nav-brand {
+      font-weight: 700; font-size: 18px; color: var(--text);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .nav-links { display: flex; gap: 24px; align-items: center; }
+    .nav-links a { color: var(--muted); font-size: 14px; font-weight: 500; }
+    .nav-links a:hover { color: var(--text); text-decoration: none; }
+    .nav-links a.btn-primary,
+    .nav-links a.btn-primary:hover { color: #ffffff; text-decoration: none; }
+
+    .btn {
+      display: inline-block; padding: 10px 22px;
+      border-radius: 8px; font-weight: 600; font-size: 14px;
+      transition: transform 0.15s, box-shadow 0.15s;
+      cursor: pointer; border: none; text-align: center;
+    }
+    .btn:hover { transform: translateY(-1px); text-decoration: none; }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color: #ffffff; box-shadow: 0 4px 14px rgba(14,116,144,0.3);
+    }
+    .btn-primary:hover { box-shadow: 0 6px 20px rgba(14,116,144,0.4); color: #ffffff; }
+    .btn-outline {
+      background: transparent; color: var(--brand);
+      border: 2px solid var(--brand);
+    }
+    .btn-outline:hover { background: var(--brand); color: #ffffff; }
+
+    .hero {
+      background: linear-gradient(135deg, #0E7490 0%, #155E75 100%);
+      color: #ffffff;
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800;
+      line-height: 1.15;
+      color: #ffffff;
+      max-width: 720px;
+      margin: 0 auto 16px;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #cffafe;
+      max-width: 580px;
+      margin: 0 auto 32px;
+    }
+    .hero-cta { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .hero-cta .btn-outline { border-color: rgba(255,255,255,0.5); color: #ffffff; }
+    .hero-cta .btn-outline:hover { background: rgba(255,255,255,0.15); border-color: #fff; }
+
+    .hero-logo {
+      max-width: 160px; margin: 0 auto 28px;
+      border-radius: 24px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.2);
+    }
+    .hero-logo img { width: 100%; height: auto; display: block; border-radius: 24px; }
+
+    .features { padding: 80px 0; }
+    .features h2 {
+      text-align: center; font-size: 32px; font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .features .subtitle {
+      text-align: center; color: var(--muted); font-size: 16px;
+      max-width: 560px; margin: 0 auto 48px;
+    }
+    .feature-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
+    .feature-card {
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .feature-card:hover {
+      box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+    }
+    .feature-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .feature-card p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    .how { padding: 80px 0; background: var(--panel); }
+    .how h2 {
+      text-align: center; font-size: 32px; font-weight: 700;
+      margin-bottom: 48px;
+    }
+    .steps {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 32px; text-align: center;
+    }
+    .step-num {
+      width: 48px; height: 48px; line-height: 48px;
+      border-radius: 50%; margin: 0 auto 16px;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color: #ffffff; font-weight: 800; font-size: 20px;
+    }
+    .steps h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .steps p { font-size: 14px; color: var(--muted); max-width: 260px; margin: 0 auto; }
+
+    .privacy-band {
+      padding: 56px 0;
+      background: linear-gradient(135deg, rgba(14,116,144,0.08), rgba(21,94,117,0.06));
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .privacy-band h2 { text-align: center; font-size: 28px; margin-bottom: 12px; }
+    .privacy-band p {
+      text-align: center; color: var(--muted); max-width: 640px; margin: 0 auto;
+      font-size: 15px;
+    }
+
+    footer {
+      background: var(--text); color: #a0adb8; padding: 40px 0;
+      font-size: 13px;
+    }
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto; padding: 0 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { color: #a0adb8; }
+    .footer-links a:hover { color: #ffffff; }
+
+    @media (max-width: 640px) {
+      .hero { padding: 48px 0 40px; }
+      .nav-links { gap: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/markdown-ai" class="nav-brand" style="text-decoration:none">
+        <img src="assets/logo.png" alt="Markdown AI" width="32" height="32" style="border-radius:8px" />
+        Markdown AI
+      </a>
+      <div class="nav-links">
+        <a href="/">ProductivitySurge</a>
+        <a href="#features">Features</a>
+        <a href="#how">How It Works</a>
+        <a href="#privacy">Privacy</a>
+        <a href="/support.html" class="btn btn-primary">Get Support</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-logo">
+        <img src="assets/logo.png" alt="Markdown AI app icon" />
+      </div>
+      <h1>Write in markdown.<br>Preview instantly.</h1>
+      <p>A focused macOS editor with side-by-side live preview, Mermaid diagrams,
+        Quick Open, and an optional local AI agent — all without sending your files to the cloud.</p>
+      <div class="hero-cta">
+        <a href="/support.html" class="btn btn-primary">Available on Mac App Store</a>
+        <a href="#features" class="btn btn-outline">Explore Features</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="container">
+      <h2>Built for documentation and daily writing</h2>
+      <p class="subtitle">Markdown AI keeps editing, preview, and file navigation in one calm workspace
+        designed for real folders and long writing sessions.</p>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Side-by-Side Live Preview</h3>
+          <p>Edit markdown on the left and see rendered output on the right with WebKit-powered preview,
+            syntax highlighting, and Mermaid diagram support.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Explorer &amp; Quick Open</h3>
+          <p>Browse indexed folders, restore your last session, and jump to any file with Ctrl+P fuzzy search
+            and incremental match highlighting.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Multi-Document Tabs</h3>
+          <p>Work across notes, specs, and README files without losing context. Local markdown links open
+            directly in new tabs inside the app.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Local Agent (Optional)</h3>
+          <p>Send the current document to a locally running model through Ollama, LM Studio, or any
+            OpenAI-compatible endpoint you configure.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Sandboxed File Access</h3>
+          <p>Markdown AI runs sandboxed and accesses files only through folders and files you explicitly
+            authorize on your Mac.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Session Restore</h3>
+          <p>Reopen tabs, workspace roots, and layout preferences automatically so you can pick up where
+            you left off.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how" id="how">
+    <div class="container">
+      <h2>Three steps to a better writing flow</h2>
+      <div class="steps">
+        <div>
+          <div class="step-num">1</div>
+          <h3>Open your folder</h3>
+          <p>Point Markdown AI at a project folder or your Documents/Markdown AI workspace.</p>
+        </div>
+        <div>
+          <div class="step-num">2</div>
+          <h3>Write with live preview</h3>
+          <p>Draft in the editor while preview updates beside you — headings, code blocks, and diagrams included.</p>
+        </div>
+        <div>
+          <div class="step-num">3</div>
+          <h3>Stay in flow</h3>
+          <p>Use Quick Open, favorites, and session restore to move fast without leaving the app.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="privacy-band" id="privacy">
+    <div class="container">
+      <h2>Privacy-first by design</h2>
+      <p>Editing and preview rendering happen on your Mac. Markdown AI does not upload your documents to
+        ProductivitySurge servers. Optional AI features connect only to endpoints you configure locally.
+        See our <a href="/privacy-policy.html#markdown-ai">privacy policy</a> for details.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div>&copy; 2026 ProductivitySurge. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="/privacy-policy.html">Privacy Policy</a>
+        <a href="/terms-of-service.html">Terms of Service</a>
+        <a href="mailto:support@productivitysurge.com?subject=Markdown%20AI%20Support">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
