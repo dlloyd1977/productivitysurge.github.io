@@ -169,6 +169,10 @@ body.product-page .badge {
 
 .product-page .feature-card img {
   width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: var(--bg-muted);
   border-radius: var(--radius-sm);
   margin-bottom: 16px;
 }
@@ -187,7 +191,9 @@ body.product-page .badge {
 }
 
 /* Expandable feature cards (markdown-ai) */
-body.product-page[data-theme="markdown-ai"] .feature-expand-hint {
+body.product-page[data-theme="markdown-ai"] .feature-expand-hint,
+body.product-page[data-theme="empty-folder"] .feature-expand-hint,
+body.product-page[data-theme="docreclaimer"] .feature-expand-hint {
   display: block;
   margin-top: 8px;
   font-size: 0.875rem;
@@ -199,14 +205,6 @@ body.product-page[data-theme="markdown-ai"] .feature-grid--expandable .feature-c
 body.product-page[data-theme="empty-folder"] .feature-grid--expandable .feature-card,
 body.product-page[data-theme="docreclaimer"] .feature-grid--expandable .feature-card {
   cursor: pointer;
-}
-
-body.product-page[data-theme="empty-folder"] .feature-expand-hint {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.875rem;
-  color: var(--brand);
-  font-weight: 600;
 }
 
 body.product-page[data-theme="markdown-ai"] .feature-grid--expandable .feature-card:focus-visible,
