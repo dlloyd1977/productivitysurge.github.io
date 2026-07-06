@@ -4,108 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Support | ProductivitySurge</title>
-  <meta name="description" content="Support resources for ProductivitySurge and DocReclaimer." />
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #F2F5F8;
-      --panel: #FFFFFF;
-      --text: #12202F;
-      --muted: #4B5D6E;
-      --border: #CDD7E1;
-      --brand: #0F6D57;
-      --link: #0D4F9E;
-    }
-    body {
-      font-family: "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-      padding: 28px 16px 44px;
-    }
-    .wrap {
-      max-width: 980px;
-      margin: 0 auto;
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 28px;
-    }
-    h1 { font-size: 34px; color: var(--text); margin-bottom: 8px; }
-    h2 { font-size: 22px; color: var(--text); margin: 26px 0 10px; }
-    p { color: var(--text); margin-bottom: 10px; }
-    .meta { color: var(--muted); font-size: 14px; margin-bottom: 18px; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 8px;
-    }
-    .card {
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 14px;
-      background: #F9FBFD;
-    }
-    .card h3 { color: var(--text); font-size: 17px; margin-bottom: 6px; }
-    .card p { color: var(--muted); font-size: 14px; margin-bottom: 8px; }
-    a { color: var(--link); }
-    a:hover { color: #0A3C79; }
-    .cta-row {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-top: 18px;
-    }
-    .btn {
-      display: inline-block;
-      background: var(--brand);
-      color: #FFFFFF;
-      text-decoration: none;
-      padding: 10px 16px;
-      border-radius: 8px;
-      font-weight: 700;
-    }
-    .btn:hover { background: #0B5A47; color: #FFFFFF; }
-    .btn-outline {
-      display: inline-block;
-      border: 2px solid var(--brand);
-      color: var(--brand);
-      text-decoration: none;
-      padding: 8px 14px;
-      border-radius: 8px;
-      font-weight: 700;
-      background: #FFFFFF;
-    }
-    .btn-outline:hover { background: var(--brand); color: #FFFFFF; }
-    @media (max-width: 860px) {
-      .grid { grid-template-columns: 1fr; }
-    }
-  </style>
+  <meta name="description" content="Support resources for ProductivitySurge products." />
+  <link rel="icon" type="image/png" sizes="32x32" href="/docreclaimer/assets/homepage/brand/ps__app-productivitysurge__surface-root-home__usage-favicon__content-primary__ratio-1x1__size-xs__dim-32x32.png" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
 </head>
-<body>
-  <main class="wrap">
-    <h1>Support</h1>
-    <p class="meta">ProductivitySurge support center for DocReclaimer, Markdown AI, Empty Folder Manager, and related products.</p>
+<body class="page-shell">
 
-    <p>If you need help with setup, troubleshooting, licensing, or account workflows, use one of the options below.</p>
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand">
+        <span class="mark" aria-hidden="true"></span>
+        ProductivitySurge
+      </a>
+      <div class="nav-links">
+        <a href="/#products">Products</a>
+        <a href="/privacy-policy.html">Privacy</a>
+        <a href="/" class="btn btn-ghost btn-sm">Home</a>
+      </div>
+    </div>
+  </header>
 
-    <section>
-      <h2>Get Help Fast</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Email Support</h3>
+  <div class="page-hero-compact">
+    <div class="container">
+      <p class="eyebrow">Help center</p>
+      <h1>Support</h1>
+      <p class="meta">DocReclaimer, Markdown AI, Empty Folder Manager, and related products.</p>
+    </div>
+  </div>
+
+  <main class="page-content">
+    <div class="container content-card">
+      <p>If you need help with setup, troubleshooting, licensing, or account workflows, use one of the options below.</p>
+
+      <h2>Get help fast</h2>
+      <div class="support-grid">
+        <article class="support-card">
+          <h3>Email support</h3>
           <p>For technical issues, account questions, or purchase support.</p>
           <p><a href="mailto:support@productivitysurge.com">support@productivitysurge.com</a></p>
         </article>
-        <article class="card">
-          <h3>Policy & Compliance</h3>
-          <p>Review legal and privacy terms used for procurement and approvals.</p>
-          <p><a href="/privacy-policy.html">Privacy Policy</a><br><a href="/terms-of-service.html">Terms of Service</a></p>
+        <article class="support-card">
+          <h3>Policy &amp; compliance</h3>
+          <p>Review legal and privacy terms for procurement and approvals.</p>
+          <p><a href="/privacy-policy.html">Privacy policy</a><br><a href="/terms-of-service.html">Terms of service</a></p>
         </article>
-        <article class="card">
-          <h3>Product Pages</h3>
-          <p>Open a product page for features, pricing, and download links.</p>
+        <article class="support-card">
+          <h3>Product pages</h3>
+          <p>Features, pricing, and download links for each app.</p>
           <p>
             <a href="/docreclaimer/">DocReclaimer</a><br>
             <a href="/markdown-ai/">Markdown AI</a><br>
@@ -113,29 +58,36 @@
           </p>
         </article>
       </div>
-    </section>
 
-    <section>
-      <h2>What To Include In A Support Request</h2>
-      <p>For faster resolution, include:</p>
-      <ul style="margin: 8px 0 12px 20px;">
+      <h2>What to include in a support request</h2>
+      <ul>
         <li>Operating system and app version</li>
         <li>A short description of expected vs actual behavior</li>
         <li>Steps to reproduce the issue</li>
         <li>Error message text (if any)</li>
       </ul>
-    </section>
 
-    <section>
-      <h2>Quick Actions</h2>
+      <h2>Quick actions</h2>
       <div class="cta-row">
-        <a class="btn" href="mailto:support@productivitysurge.com?subject=DocReclaimer%20Support%20Request">Contact Support</a>
-        <a class="btn-outline" href="/">Back To Home</a>
-        <a class="btn-outline" href="/docreclaimer/">Open DocReclaimer</a>
-        <a class="btn-outline" href="/markdown-ai/">Open Markdown AI</a>
-        <a class="btn-outline" href="/emptyfolderManager/">Open Empty Folder Manager</a>
+        <a class="btn btn-primary" href="mailto:support@productivitysurge.com?subject=ProductivitySurge%20Support">Contact support</a>
+        <a class="btn btn-outline" href="/">Back to home</a>
+        <a class="btn btn-outline" href="/docreclaimer/">DocReclaimer</a>
+        <a class="btn btn-outline" href="/markdown-ai/">Markdown AI</a>
+        <a class="btn btn-outline" href="/emptyfolderManager/">Empty Folder Manager</a>
       </div>
-    </section>
+    </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>&copy; 2026 ProductivitySurge. All rights reserved.</div>
+      <div class="footer-links">
+        <a href="/privacy-policy.html">Privacy</a>
+        <a href="/terms-of-service.html">Terms</a>
+        <a href="mailto:support@productivitysurge.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
