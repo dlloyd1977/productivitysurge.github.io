@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Become a Tester | ProductivitySurge</title>
-  <meta name="description" content="Join the Markdown A.I. TestFlight beta for macOS. Help validate sandboxed folder access before the App Store release." />
+  <meta name="description" content="Join ProductivitySurge TestFlight betas for Markdown A.I., DocReclaimer, Empty Folder Manager, and DL Viewer on macOS." />
   <meta property="og:title" content="Become a Tester | ProductivitySurge" />
-  <meta property="og:description" content="Test Markdown A.I. 0.7.4 (2) on Mac via TestFlight. Local files. Your feedback shapes the App Store release." />
+  <meta property="og:description" content="Test ProductivitySurge macOS apps via TestFlight. Local-first tools. Your feedback shapes App Store releases." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://productivitysurge.com/become-a-tester/" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -35,105 +35,195 @@
     <div class="container">
       <p class="eyebrow">Beta testing</p>
       <h1>Become a Tester</h1>
-      <p class="meta">Markdown A.I. for Mac — TestFlight build <strong>0.7.4 (2)</strong></p>
+      <p class="meta">Help us validate ProductivitySurge macOS apps before App Store release.</p>
     </div>
   </div>
 
   <main class="page-content">
     <div class="container content-card">
       <p>
-        Help us validate the App Store sandboxed experience before general release.
-        Markdown A.I. is a focused macOS editor with live preview, Mermaid diagrams, Quick Open,
-        and an optional local AI agent — your documents stay on your Mac.
+        ProductivitySurge ships focused, local-first Mac tools. Testers help prove sandboxed folder access,
+        first-run flows, and day-to-day reliability before general release.
       </p>
 
-      <div class="cta-row">
-        <a class="btn btn-primary" href="https://testflight.apple.com/join/Qsp71Ecv" target="_blank" rel="noopener">
-          Join with TestFlight
-        </a>
-        <a class="btn btn-outline" href="/markdown-ai/">Product page</a>
-        <a class="btn btn-outline" href="mailto:support@productivitysurge.com?subject=Markdown%20A.I.%20TestFlight%20help">Need help?</a>
-      </div>
-
-      <h2>Current build</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Field</th>
-            <th>Value</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>App</td>
-            <td>Markdown A.I.</td>
-          </tr>
-          <tr>
-            <td>Version</td>
-            <td>0.7.4</td>
-          </tr>
-          <tr>
-            <td>Build</td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <td>Platform</td>
-            <td>macOS (Apple Silicon / arm64)</td>
-          </tr>
-          <tr>
-            <td>Distribution</td>
-            <td>Apple TestFlight (public link)</td>
-          </tr>
-          <tr>
-            <td>Join link</td>
-            <td><a href="https://testflight.apple.com/join/Qsp71Ecv" target="_blank" rel="noopener">testflight.apple.com/join/Qsp71Ecv</a></td>
-          </tr>
-        </tbody>
-      </table>
+      <nav class="tester-jump" aria-label="Test apps">
+        <a href="#markdown-ai">Markdown A.I.</a>
+        <a href="#docreclaimer">DocReclaimer</a>
+        <a href="#empty-folder-manager">Empty Folder Manager</a>
+        <a href="#dl-viewer">DL Viewer</a>
+      </nav>
 
       <h2>How to join</h2>
       <ol>
         <li>Install the <strong>TestFlight</strong> app from the Mac App Store if you do not already have it.</li>
-        <li>Open the public invite:
-          <a href="https://testflight.apple.com/join/Qsp71Ecv" target="_blank" rel="noopener">https://testflight.apple.com/join/Qsp71Ecv</a>
-        </li>
-        <li>Accept the invite, then install <strong>Markdown A.I. 0.7.4 (2)</strong> and launch it.</li>
-        <li>If the link says the beta is full, email
-          <a href="mailto:support@productivitysurge.com">support@productivitysurge.com</a>
-          and we will expand capacity or send a direct invite.</li>
+        <li>Open the invite link for the app section below (or email support if the beta is full).</li>
+        <li>Accept the invite, install the listed build, and work through the test focus items.</li>
+        <li>Send feedback to <a href="mailto:support@productivitysurge.com">support@productivitysurge.com</a> with macOS version, steps, and screenshots.</li>
       </ol>
 
-      <h2>What to test</h2>
-      <div class="support-grid">
-        <article class="support-card">
-          <h3>1. Clean launch</h3>
-          <p>Confirm the app does <strong>not</strong> silently open or access <code>~/Documents/Markdown AI</code> on first launch.</p>
-        </article>
-        <article class="support-card">
-          <h3>2. Choose Folder</h3>
-          <p>Authorize a folder with the system picker, then create, edit, and save a Markdown file there.</p>
-        </article>
-        <article class="support-card">
-          <h3>3. Quit &amp; relaunch</h3>
-          <p>Quit completely, relaunch, and confirm access to the authorized folder returns without choosing again.</p>
-        </article>
-      </div>
-      <ul>
-        <li>Optionally try <strong>Add Root</strong>, <strong>Remove Root</strong>, and <strong>Reauthorize Root</strong>.</li>
-        <li>Confirm <strong>File → Open</strong> works for a separately selected file.</li>
-        <li>Check <strong>Help → Markdown A.I. Website</strong> and <strong>Help → Report an Issue / Support</strong> if present in your build.</li>
-      </ul>
+      <!-- 1) Markdown A.I. -->
+      <section class="tester-app" id="markdown-ai">
+        <div class="tester-hero">
+          <img
+            src="/assets/become-a-tester/markdown-ai-hero.png"
+            width="1672"
+            height="941"
+            alt="Markdown A.I. for Mac — Write. Preview. Stay Local."
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="tester-app-header">
+          <h2>1. Markdown A.I.</h2>
+          <span class="badge">Open TestFlight · 0.7.4 (2)</span>
+        </div>
+        <p>
+          Focused macOS editor with live preview, Mermaid diagrams, Quick Open, and an optional local AI agent.
+          Documents stay on your Mac.
+        </p>
+        <table>
+          <thead>
+            <tr><th>Field</th><th>Value</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Version</td><td>0.7.4</td></tr>
+            <tr><td>Build</td><td>2</td></tr>
+            <tr><td>Platform</td><td>macOS (Apple Silicon / arm64)</td></tr>
+            <tr>
+              <td>Join link</td>
+              <td><a href="https://testflight.apple.com/join/Qsp71Ecv" target="_blank" rel="noopener">testflight.apple.com/join/Qsp71Ecv</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>What to test</h3>
+        <div class="support-grid">
+          <article class="support-card">
+            <h3>Clean launch</h3>
+            <p>Confirm the app does <strong>not</strong> silently open or access <code>~/Documents/Markdown AI</code> on first launch.</p>
+          </article>
+          <article class="support-card">
+            <h3>Choose Folder</h3>
+            <p>Authorize a folder with the system picker, then create, edit, and save a Markdown file there.</p>
+          </article>
+          <article class="support-card">
+            <h3>Quit &amp; relaunch</h3>
+            <p>Quit completely, relaunch, and confirm access to the authorized folder returns without choosing again.</p>
+          </article>
+        </div>
+        <ul>
+          <li>Optionally try <strong>Add Root</strong>, <strong>Remove Root</strong>, and <strong>Reauthorize Root</strong>.</li>
+          <li>Confirm <strong>File → Open</strong> works for a separately selected file.</li>
+          <li>Check Help links for Website and Support if present in your build.</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://testflight.apple.com/join/Qsp71Ecv" target="_blank" rel="noopener">Join Markdown A.I.</a>
+          <a class="btn btn-outline" href="/markdown-ai/">Product page</a>
+          <a class="btn btn-outline" href="mailto:support@productivitysurge.com?subject=Markdown%20A.I.%20TestFlight%20help">Need help?</a>
+        </div>
+      </section>
+
+      <!-- 2) DocReclaimer -->
+      <section class="tester-app" id="docreclaimer">
+        <div class="tester-hero">
+          <img
+            src="/assets/become-a-tester/docreclaimer-hero.png"
+            width="1672"
+            height="941"
+            alt="DocReclaimer — rename smarter, organize instantly"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="tester-app-header">
+          <h2>2. DocReclaimer</h2>
+          <span class="badge">TestFlight invite pending</span>
+        </div>
+        <p>
+          OCR-enabled document rename automation for macOS. Scan folders, preview renames, and standardize naming
+          with free and Pro tiers.
+        </p>
+        <h3>What to test (when invite opens)</h3>
+        <ul>
+          <li>First-run permissions and folder selection</li>
+          <li>Scan → rename preview → apply on a small sample set</li>
+          <li>Template library basics and confidence / review flow</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="mailto:support@productivitysurge.com?subject=DocReclaimer%20TestFlight%20tester%20request">Request invite</a>
+          <a class="btn btn-outline" href="/docreclaimer/">Product page</a>
+        </div>
+      </section>
+
+      <!-- 3) Empty Folder Manager -->
+      <section class="tester-app" id="empty-folder-manager">
+        <div class="tester-hero">
+          <img
+            src="/assets/become-a-tester/empty-folder-manager-hero.png"
+            width="1672"
+            height="941"
+            alt="Empty Folder Manager for Mac"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="tester-app-header">
+          <h2>3. Empty Folder Manager</h2>
+          <span class="badge">TestFlight invite pending</span>
+        </div>
+        <p>
+          Find and clean empty folders on macOS with a clear review step before anything is removed.
+        </p>
+        <h3>What to test (when invite opens)</h3>
+        <ul>
+          <li>Choose a safe sample tree (never start on a critical system path)</li>
+          <li>Scan results accuracy and exclusion / review UI</li>
+          <li>Delete / keep workflow and undo / safety messaging</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="mailto:support@productivitysurge.com?subject=Empty%20Folder%20Manager%20TestFlight%20tester%20request">Request invite</a>
+          <a class="btn btn-outline" href="/emptyfolderManager/">Product page</a>
+        </div>
+      </section>
+
+      <!-- 4) DL Viewer -->
+      <section class="tester-app" id="dl-viewer">
+        <div class="tester-hero tester-hero-placeholder" role="img" aria-label="DL Viewer hero image coming soon">
+          <div class="tester-hero-placeholder-inner">
+            <img src="/assets/brand/productivitysurge-icon-64.png" width="48" height="48" alt="" />
+            <p><strong>DL Viewer</strong></p>
+            <p class="meta">Hero image coming soon — drop <code>dl-viewer-hero.png</code> into <code>/assets/become-a-tester/</code></p>
+          </div>
+        </div>
+        <div class="tester-app-header">
+          <h2>4. DL Viewer</h2>
+          <span class="badge">TestFlight invite pending</span>
+        </div>
+        <p>
+          Local desktop video player for folders and playlists — fast navigation, triage, dual view, and configurable controls.
+        </p>
+        <h3>What to test (when invite opens)</h3>
+        <ul>
+          <li>Open a local folder or playlist and play a short sample set</li>
+          <li>Playlist remove / undo and dual-viewer drag-and-drop</li>
+          <li>Seek, speed, and still-image / GIF handling</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="mailto:support@productivitysurge.com?subject=DL%20Viewer%20TestFlight%20tester%20request">Request invite</a>
+          <a class="btn btn-outline" href="mailto:support@productivitysurge.com?subject=DL%20Viewer%20product%20info">Ask about DL Viewer</a>
+        </div>
+      </section>
 
       <h2>Requirements</h2>
       <ul>
-        <li>A Mac with Apple Silicon (this build is arm64)</li>
+        <li>A Mac that meets each build’s architecture note (Markdown A.I. 0.7.4 (2) is Apple Silicon / arm64)</li>
         <li>macOS 13 or later (TestFlight requirement for macOS betas)</li>
         <li>An Apple ID signed into the Mac App Store / TestFlight</li>
       </ul>
 
       <h2>How to report issues</h2>
-      <p>Send feedback to <a href="mailto:support@productivitysurge.com?subject=Markdown%20A.I.%20TestFlight%200.7.4%20(2)%20feedback">support@productivitysurge.com</a> and include:</p>
+      <p>Email <a href="mailto:support@productivitysurge.com">support@productivitysurge.com</a> and include:</p>
       <ul>
+        <li>App name and build</li>
         <li>macOS version and Mac model</li>
         <li>Expected vs actual behavior</li>
         <li>Steps to reproduce</li>
@@ -142,12 +232,12 @@
 
       <h2>Privacy</h2>
       <p>
-        Editing and preview happen on your Mac. ProductivitySurge does not receive your markdown files.
-        See the <a href="/privacy-policy.html">Privacy Policy</a> for details.
+        ProductivitySurge products are designed for local-first workflows. See the
+        <a href="/privacy-policy.html">Privacy Policy</a> for details.
       </p>
 
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://testflight.apple.com/join/Qsp71Ecv" target="_blank" rel="noopener">Join with TestFlight</a>
+        <a class="btn btn-primary" href="https://testflight.apple.com/join/Qsp71Ecv" target="_blank" rel="noopener">Join Markdown A.I.</a>
         <a class="btn btn-outline" href="/support.html">Support</a>
         <a class="btn btn-outline" href="/media/">Press &amp; Media</a>
         <a class="btn btn-outline" href="/">Home</a>

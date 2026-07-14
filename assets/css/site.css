@@ -384,6 +384,115 @@ footer {
   margin-top: 24px;
 }
 
+/* ── Become a Tester — multi-app sections ─────────────────────── */
+.tester-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 8px 0 8px;
+}
+.tester-jump a {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+  background: var(--bg-muted);
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.tester-jump a:hover {
+  color: var(--text);
+  border-color: var(--border);
+  background: #fff;
+  text-decoration: none;
+}
+
+.tester-app {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-subtle);
+}
+.tester-app > h2,
+.tester-app-header h2 {
+  margin-top: 0;
+}
+.tester-app-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0 12px;
+}
+.tester-app-header h2 {
+  margin: 0;
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.tester-app h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 24px 0 10px;
+  color: var(--text);
+}
+
+.tester-hero {
+  margin: 0 0 8px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-muted);
+  aspect-ratio: 16 / 9;
+}
+.tester-hero img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tester-hero-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(135deg, rgba(34, 211, 238, 0.12), rgba(37, 99, 235, 0.16)),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      rgba(148, 163, 184, 0.08) 10px,
+      rgba(148, 163, 184, 0.08) 20px
+    );
+}
+.tester-hero-placeholder-inner {
+  text-align: center;
+  padding: 28px 20px;
+  max-width: 28rem;
+}
+.tester-hero-placeholder-inner img {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 12px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  object-fit: cover;
+}
+.tester-hero-placeholder-inner p {
+  margin: 0 0 6px;
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+}
+.tester-hero-placeholder-inner .meta {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+.tester-hero-placeholder-inner code {
+  font-size: 0.75rem;
+}
+
 /* ── Responsive ───────────────────────────────────────────────── */
 @media (max-width: 900px) {
   .support-grid { grid-template-columns: 1fr; }
