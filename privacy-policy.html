@@ -36,7 +36,7 @@
     <div class="container">
       <p class="eyebrow">Legal</p>
       <h1>Privacy Policy</h1>
-      <p class="meta">Effective April 19, 2026 · Updated July 5, 2026</p>
+      <p class="meta">Effective April 19, 2026 · Updated July 24, 2026</p>
     </div>
   </div>
 
@@ -91,17 +91,20 @@
     </table>
 
     <h2 id="markdown-ai">Markdown AI</h2>
-    <p>Markdown AI is a macOS markdown editor that works with folders you choose on your Mac. Unless you explicitly configure optional AI features, your document content is processed locally on your device.</p>
+    <p>Markdown AI is a macOS and iPadOS markdown editor that works with documents and folders you choose. Document content is processed locally on your device unless you explicitly configure the macOS app to use a separate AI endpoint.</p>
     <h3>Local Processing</h3>
     <ul>
-      <li>Editing, preview rendering, and file indexing occur on your Mac.</li>
+      <li>Editing, preview rendering, file indexing, and iPad Local A.I. inference occur on your device.</li>
       <li>ProductivitySurge does not receive or store the contents of your markdown files.</li>
-      <li>Settings and session state are stored locally under your user account on the device.</li>
+      <li>The iPad app uses Apple Foundation Models when available and a bundled Qwen model as its on-device fallback. Prompts, document text, responses, and conversation history are not sent to ProductivitySurge, Apple Private Cloud Compute, the model publisher, or another inference service.</li>
+      <li>Settings, security-scoped file bookmarks, and session state are stored locally on the device. Local A.I. prompts, responses, and conversation history remain memory-only.</li>
     </ul>
-    <h3>Optional Local Agent</h3>
-    <p>If you enable the Local Agent, prompts derived from your current document may be sent to an AI endpoint you configure (for example Ollama or LM Studio on your network). That transmission is initiated by your machine to your chosen endpoint — not to ProductivitySurge servers.</p>
+    <h3>User-Selected Files Providers</h3>
+    <p>On iPad, you may grant access to files through Apple's document picker, including iCloud Drive, On My iPad, SMB locations, or attached storage shown by the Files app. Markdown AI receives access only to the items you select. Files-provider credentials remain managed by Apple and the selected provider; ProductivitySurge does not receive them.</p>
+    <h3>Optional macOS Local Agent</h3>
+    <p>If you enable the macOS Local Agent, prompts derived from your current document may be sent to an AI endpoint you configure (for example Ollama or LM Studio on your network). That transmission is initiated by your machine to your chosen endpoint — not to ProductivitySurge servers.</p>
     <h3>Analytics</h3>
-    <p>Markdown AI does not include default third-party analytics or advertising trackers.</p>
+    <p>Markdown AI does not include third-party analytics, advertising trackers, or cross-app tracking.</p>
 
     <h2>4. Data Security</h2>
     <p>We apply reasonable safeguards including authentication, rate limiting, CORS restrictions, and input validation. No internet transmission method is completely secure.</p>
