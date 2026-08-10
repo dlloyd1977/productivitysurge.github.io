@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Search Console HTML verification file (keep crawlable)
+Allow: /googlee324c4038af57bce.html
+
+Sitemap: https://productivitysurge.com/sitemap.xml
