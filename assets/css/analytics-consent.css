@@ -1,0 +1,32 @@
+.ps-consent, .ps-consent-settings {
+  color-scheme: light;
+  color: #0f172a;
+  background: #fff;
+  border: 1px solid #94a3b8;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px #0f172a26;
+  font: 400 14px/1.5 system-ui, sans-serif;
+}
+.ps-consent {
+  position: fixed; z-index: 1000; bottom: 68px; right: 16px;
+  width: min(480px, calc(100vw - 32px)); padding: 16px;
+  max-height: calc(100dvh - 100px); overflow: auto;
+}
+.ps-consent[hidden], .ps-consent [hidden] { display: none !important; }
+.ps-consent h2 { font: 600 18px/1.4 system-ui, sans-serif; margin: 0 0 8px; color: #0f172a; }
+.ps-consent p { margin: 0 0 12px; color: #334155; }
+.ps-consent a { color: #115e59; text-decoration: underline; }
+.ps-consent-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.ps-consent button, .ps-consent-settings {
+  cursor: pointer; padding: 9px 12px; min-height: 44px; width: auto;
+  border: 1px solid #64748b; border-radius: 8px;
+  background: #fff; color: #0f172a; text-align: center;
+  font: 400 14px/1.5 system-ui, sans-serif;
+}
+.ps-consent button:hover, .ps-consent-settings:hover { background: #e2e8f0; }
+.ps-consent button:active, .ps-consent-settings:active { background: #cbd5e1; }
+.ps-consent button:focus-visible, .ps-consent-settings:focus-visible, .ps-consent a:focus-visible {
+  outline: 3px solid #2563eb; outline-offset: 3px;
+}
+.ps-consent .ps-consent-status { font-size: 12px; margin: 10px 0 0; }
+.ps-consent-settings { position: fixed; z-index: 999; right: 16px; bottom: 12px; }
