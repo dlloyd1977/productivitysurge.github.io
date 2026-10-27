@@ -31,3 +31,4 @@
 /* Official Apple artwork: retain its proportions and quarter-height clear space. */
 .store-badge-link { display: inline-block; padding: 12px; margin-left: -12px; border-radius: 8px; }
 .store-badge-link img { display: block; height: 48px; width: auto; max-width: 100%; }
+.hero-cta .store-badge-link { margin-left: 0; }
