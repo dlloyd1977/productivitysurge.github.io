@@ -1,8 +1,6 @@
 (function () {
-  const grid = document.querySelector(".feature-grid--expandable");
-  if (!grid) return;
-
-  const cards = grid.querySelectorAll(".feature-card");
+  const cards = document.querySelectorAll(".feature-grid--expandable .feature-card");
+  if (!cards.length) return;
   const dialog = document.getElementById("feature-lightbox");
   const backdrop = dialog?.querySelector(".feature-lightbox-backdrop");
   const closeBtn = dialog?.querySelector(".feature-lightbox-close");
