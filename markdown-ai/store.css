@@ -27,3 +27,7 @@
   .product-page[data-theme="markdown-ai"] .site-nav { position: static; }
   .store-section { scroll-margin-top: 24px; }
 }
+
+/* Official Apple artwork: retain its proportions and quarter-height clear space. */
+.store-badge-link { display: inline-block; padding: 12px; margin-left: -12px; border-radius: 8px; }
+.store-badge-link img { display: block; height: 48px; width: auto; max-width: 100%; }
