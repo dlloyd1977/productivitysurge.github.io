@@ -1,0 +1,29 @@
+/* App Store edition content, scoped to the Markdown A.I. page. */
+.store-section { padding: 40px 0; scroll-margin-top: 90px; }
+.store-section h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 12px; }
+.store-intro { color: var(--text-secondary); margin-bottom: 24px; }
+.edition-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.edition-card { background: var(--bg-elevated); color: var(--text); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+.edition-card .badge { text-transform: none; }
+.edition-card h3 { margin: 12px 0; font-size: 1.35rem; }
+.edition-card p, .edition-card li { color: var(--text-secondary); }
+.edition-card ul { padding-left: 20px; margin: 16px 0; }
+.edition-card li + li { margin-top: 8px; }
+.edition-detail { margin: 16px 0; font-size: .9375rem; }
+.store-purchase { background: var(--bg-muted); }
+.purchase-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 24px 0; }
+.purchase-grid h3 { font-size: 1.125rem; margin-bottom: 8px; }
+.store-help { font-size: .9375rem; }
+.product-page .hero .store-note { font-size: .9375rem; margin: 20px auto 24px; }
+.product-page[data-theme="markdown-ai"] .btn { min-height: 44px; padding: 10px 18px; text-align: center; font-weight: 500; }
+.product-page[data-theme="markdown-ai"] .edition-card .btn-primary { background: #0e7490; color: #fff; }
+.product-page[data-theme="markdown-ai"] a:focus-visible { outline: 3px solid #2563eb; outline-offset: 4px; }
+.product-page[data-theme="markdown-ai"] .hero a:focus-visible { outline-color: #fff; }
+.product-page[data-theme="markdown-ai"] .site-nav { height: auto; min-height: 72px; padding-block: 12px; }
+.product-page[data-theme="markdown-ai"] .nav-inner, .product-page[data-theme="markdown-ai"] .nav-links { flex-wrap: wrap; gap: 12px 20px; }
+@media (max-width: 700px) {
+  .edition-grid, .purchase-grid { grid-template-columns: 1fr; }
+  .edition-card { padding: 20px; }
+  .product-page[data-theme="markdown-ai"] .site-nav { position: static; }
+  .store-section { scroll-margin-top: 24px; }
+}
