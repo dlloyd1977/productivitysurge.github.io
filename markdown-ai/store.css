@@ -33,53 +33,12 @@
 .store-badge-link img { display: block; height: 48px; width: auto; max-width: 100%; }
 .hero-cta .store-badge-link { margin-left: 0; }
 
-/*
- * Direct CTA mirrors official black App Store badge geometry (viewBox 40 → 48px):
- * black fill, ~1px light rim (#a6a6a6 in Apple art; white per product request),
- * Apple rounded-rect corners (~7.8px at 48px) — not a full pill.
- */
+/* Direct CTA uses the same 48px SVG badge treatment as the App Store artwork. */
 .product-page[data-theme="markdown-ai"] .hero-cta {
   align-items: center;
 }
 .product-page[data-theme="markdown-ai"] .hero-cta a.hero-direct-download {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  /* Match .store-badge-link quarter-height clear space around 48px art */
-  padding: 12px;
   margin-left: 0;
-  text-decoration: none;
-  border-radius: 8px;
-  background: transparent;
-  box-shadow: none;
-}
-.product-page[data-theme="markdown-ai"] .hero-cta a.hero-direct-download .hero-direct-badge {
-  box-sizing: border-box;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 48px;
-  min-height: 48px;
-  max-height: 48px;
-  padding: 0 16px;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: 0.01em;
-  white-space: nowrap;
-  color: #fff;
-  background-color: #000;
-  background-image: none;
-  border: 1px solid #fff;
-  /* Apple badge corner ≈ 6.5/40 of art height → ~7.8px at 48px display */
-  border-radius: 7.8px;
-  box-shadow: none;
-}
-.product-page[data-theme="markdown-ai"] .hero-cta a.hero-direct-download:hover .hero-direct-badge,
-.product-page[data-theme="markdown-ai"] .hero-cta a.hero-direct-download:focus-visible .hero-direct-badge {
-  background-color: #000;
-  color: #fff;
-  border-color: #fff;
 }
 
 /* Hero note links must stay light on the teal gradient (site default teal is invisible). */
