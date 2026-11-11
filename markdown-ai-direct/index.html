@@ -59,14 +59,13 @@ if(window.psAnalyticsAllowed && window.psAnalyticsAllowed())start();})();</scrip
       </div>
       <p class="eyebrow" style="display:block;margin-bottom:10px;">Direct download channel</p>
       <h1>Markdown A.I. for Mac</h1>
-      <p>Download the notarized Disk Image from ProductivitySurge. Purchase a 1-year website license to Activate License in the app. The same registration code also unlocks the Mac App Store and iPadOS builds (up to three personally controlled devices).</p>
+      <p>Download the notarized Disk Image from ProductivitySurge. Purchase a website license to Activate License in the app. The same registration code also unlocks the Mac App Store and iPadOS builds (up to three personally controlled devices).</p>
       <div id="checkout-status" class="store-note" hidden style="margin:14px auto 0;max-width:42rem;"></div>
       <div class="hero-cta" style="margin-top:22px;">
         <a class="btn btn-primary btn-lg" id="download-dmg"
            href="https://ps-downloads.productivitysurge.workers.dev/downloads/markdown-ai/Markdown_AI-v3.20.28.dmg"
            download>Download Disk Image</a>
-        <a class="btn btn-outline btn-lg" href="https://buy.stripe.com/9B68wQaNc1RJakVcgebfO00"
-           rel="noopener noreferrer">Buy 1-Year License — $29.99</a>
+        <a class="btn btn-outline btn-lg" href="#license" rel="noopener">View License Options</a>
       </div>
       <p class="store-note">macOS Disk Image · Notarized · Version 3.20.28<br>
         App Store Subscribe / Restore remains available for customers who buy only through Apple.</p>
@@ -101,8 +100,31 @@ if(window.psAnalyticsAllowed && window.psAnalyticsAllowed())start();})();</scrip
   <section class="store-section store-purchase" id="license" aria-labelledby="license-title">
     <div class="container">
       <h2 id="license-title">Website multiplatform license</h2>
-      <p>One named-user website license for one year from first server-confirmed activation. Manual annual renewal. Existing documents stay available if the license expires.</p>
+      <p>One named-user website license. Choose auto-renew Premium or a manual one-year license. Existing documents stay available if access expires.</p>
       <div class="purchase-grid">
+        <article>
+          <h3>Monthly Premium</h3>
+          <p>$3.99 per month, auto-renew. Cancel anytime in the Stripe customer portal. No trial on monthly.</p>
+          <p class="store-help" style="margin-top:12px;">
+            <a class="btn btn-primary btn-sm" href="https://buy.stripe.com/aFaaEY4oO0NF0Kl2FEbfO02" rel="noopener noreferrer">Subscribe Monthly — $3.99</a>
+          </p>
+        </article>
+        <article>
+          <h3>Annual Premium</h3>
+          <p>$29.99 per year, auto-renew. Includes a 30-day trial on this website checkout, then yearly billing.</p>
+          <p class="store-help" style="margin-top:12px;">
+            <a class="btn btn-primary btn-sm" href="https://buy.stripe.com/28EcN69J853V3Wx3JIbfO03" rel="noopener noreferrer">Subscribe Annual — $29.99</a>
+          </p>
+        </article>
+        <article>
+          <h3>1-Year Manual License</h3>
+          <p>$29.99 once. No automatic charges. Renew manually when ready. Same three-device seat pool.</p>
+          <p class="store-help" style="margin-top:12px;">
+            <a class="btn btn-outline btn-sm" href="https://buy.stripe.com/9B68wQaNc1RJakVcgebfO00" rel="noopener noreferrer">Buy 1-Year License — $29.99</a>
+          </p>
+        </article>
+      </div>
+      <div class="purchase-grid" style="margin-top:18px;">
         <article>
           <h3>What it unlocks</h3>
           <p>Premium-equivalent access on Mac Direct download, Mac App Store, and iPadOS with the same email and registration code.</p>
@@ -117,7 +139,6 @@ if(window.psAnalyticsAllowed && window.psAnalyticsAllowed())start();})();</scrip
         </article>
       </div>
       <p class="store-help" style="margin-top:18px;">
-        <a class="btn btn-primary btn-sm" href="https://buy.stripe.com/9B68wQaNc1RJakVcgebfO00" rel="noopener noreferrer">Buy 1-Year License — $29.99</a>
         <a class="btn btn-outline btn-sm" href="/markdown-ai/">Mac &amp; iPad App Store page</a>
         <a class="btn btn-outline btn-sm" href="/support.html">Support</a>
       </p>
@@ -144,12 +165,19 @@ if(window.psAnalyticsAllowed && window.psAnalyticsAllowed())start();})();</scrip
       var checkout = params.get("checkout");
       if (checkout === "success") {
         status.hidden = false;
+        var plan = params.get("plan");
+        var planNote = plan === "monthly"
+          ? " Monthly Premium subscription."
+          : plan === "annual"
+            ? " Annual Premium subscription."
+            : "";
         status.textContent =
-          "Payment received. Check your email for the automatic registration message, then download the Disk Image and use Activate License in Markdown A.I.";
+          "Payment received." + planNote +
+          " Check your email for the automatic registration message, then download the Disk Image and use Activate License in Markdown A.I.";
       } else if (checkout === "cancel") {
         status.hidden = false;
         status.textContent =
-          "Checkout was canceled. You can buy the 1-year license anytime, or download the Disk Image first and activate later.";
+          "Checkout was canceled. You can choose Monthly, Annual, or the manual 1-year license anytime, or download the Disk Image first and activate later.";
       }
     })();
   </script>
