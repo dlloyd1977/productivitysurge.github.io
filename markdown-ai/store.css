@@ -33,8 +33,8 @@
 .store-badge-link img { display: block; height: 48px; width: auto; max-width: 100%; }
 .hero-cta .store-badge-link { margin-left: 0; }
 
-/* Match Direct CTA height to the 48px App Store badge artwork in the hero row. */
-.product-page[data-theme="markdown-ai"] .hero-cta .hero-direct-download {
+/* Match Direct CTA to the 48px black App Store badge row (solid black / white text). */
+.product-page[data-theme="markdown-ai"] .hero-cta a.btn.hero-direct-download {
   box-sizing: border-box;
   height: 48px;
   min-height: 48px;
@@ -43,14 +43,18 @@
   font-weight: 600;
   line-height: 1;
   align-self: center;
-  background: #000;
+  background-color: #000;
+  background-image: none;
   color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid #000;
   box-shadow: none;
   backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
-.product-page[data-theme="markdown-ai"] .hero-cta .hero-direct-download:hover {
-  background: #111;
+.product-page[data-theme="markdown-ai"] .hero-cta a.btn.hero-direct-download:hover,
+.product-page[data-theme="markdown-ai"] .hero-cta a.btn.hero-direct-download:focus-visible {
+  background-color: #111;
+  background-image: none;
   color: #fff;
-  border-color: rgba(255, 255, 255, 0.55);
+  border-color: #111;
 }
