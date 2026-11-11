@@ -32,3 +32,15 @@
 .store-badge-link { display: inline-block; padding: 12px; margin-left: -12px; border-radius: 8px; }
 .store-badge-link img { display: block; height: 48px; width: auto; max-width: 100%; }
 .hero-cta .store-badge-link { margin-left: 0; }
+
+/* Match Direct CTA height to the 48px App Store badge artwork in the hero row. */
+.product-page[data-theme="markdown-ai"] .hero-cta .hero-direct-download {
+  box-sizing: border-box;
+  height: 48px;
+  min-height: 48px;
+  padding: 0 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+  align-self: center;
+}
