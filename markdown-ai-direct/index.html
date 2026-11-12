@@ -88,7 +88,7 @@ if(window.psAnalyticsAllowed && window.psAnalyticsAllowed())start();})();</scrip
         </article>
         <article>
           <h3>3. Activate License</h3>
-          <p>After purchase, open Markdown A.I. → Activate License. Enter the Purchase Email and License Code (<code>MAI-D-…</code>) from the automatic registration email. Both fields show the full value without horizontal scrolling.</p>
+          <p>After purchase, check your email for the automatic registration message (also check Junk or Spam). Then open Markdown A.I. → Activate License and enter the Purchase Email and License Code (<code>MAI-D-…</code>). Both fields show the full value without horizontal scrolling.</p>
         </article>
       </div>
       <p class="store-help" style="margin-top:18px;">
@@ -100,7 +100,7 @@ if(window.psAnalyticsAllowed && window.psAnalyticsAllowed())start();})();</scrip
   <section class="store-section store-purchase" id="license" aria-labelledby="license-title">
     <div class="container">
       <h2 id="license-title">Website multiplatform license</h2>
-      <p>One named-user website license. Choose auto-renew Premium or a manual one-year license. Existing documents stay available if access expires.</p>
+      <p>One named-user website license. Choose auto-renew Premium or a manual one-year license. After checkout, watch for the automatic registration email and check Junk or Spam if it does not appear in your inbox. Existing documents stay available if access expires.</p>
       <div class="purchase-grid">
         <article>
           <h3>Monthly Premium</h3>
@@ -173,7 +173,8 @@ if(window.psAnalyticsAllowed && window.psAnalyticsAllowed())start();})();</scrip
             : "";
         status.textContent =
           "Payment received." + planNote +
-          " Check your email for the automatic registration message, then download the Disk Image and use Activate License in Markdown A.I.";
+          " Check your email for the automatic registration message — if it is missing, look in Junk or Spam." +
+          " Then download the Disk Image and use Activate License in Markdown A.I.";
       } else if (checkout === "cancel") {
         status.hidden = false;
         status.textContent =
