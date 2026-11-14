@@ -9,4 +9,4 @@ assets/
 └── archive/            # Superseded source exports
 ```
 
-Canonical sources: `prodsurge/empty_folder_manager/assets/marketing/`
+Canonical sources: `prodsurge/marketing/empty_folder_manager/assets/marketing/`
