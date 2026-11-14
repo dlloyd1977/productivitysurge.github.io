@@ -3,14 +3,14 @@
     <channel>
         <title>Markdown AI</title>
         <item>
-            <title>3.23.0</title>
-            <pubDate>Sat, 14 Nov 2026 11:16:16 -0500</pubDate>
+            <title>3.23.1</title>
+            <pubDate>Sat, 14 Nov 2026 15:44:57 -0500</pubDate>
             <link>https://productivitysurge.com/markdown-ai-direct/</link>
-            <sparkle:version>19</sparkle:version>
-            <sparkle:shortVersionString>3.23.0</sparkle:shortVersionString>
+            <sparkle:version>20</sparkle:version>
+            <sparkle:shortVersionString>3.23.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
-            <sparkle:releaseNotesLink>https://productivitysurge.com/markdown-ai-direct/Markdown_AI-v3.23.0.html</sparkle:releaseNotesLink>
-            <enclosure url="https://ps-downloads.productivitysurge.workers.dev/downloads/markdown-ai/Markdown_AI-v3.23.0.dmg" length="299415765" type="application/octet-stream" sparkle:edSignature="1dfzV9Rmx7SKQ2MBapWuTb2argd1n4V4eqz8Mi90hD5QDNboWdiBN4M9WeVAJezaIhh6h1R6U/tPYkGINRueAQ=="/>
+            <sparkle:releaseNotesLink>https://productivitysurge.com/markdown-ai-direct/Markdown_AI-v3.23.1.html</sparkle:releaseNotesLink>
+            <enclosure url="https://ps-downloads.productivitysurge.workers.dev/downloads/markdown-ai/Markdown_AI-v3.23.1.dmg" length="299257494" type="application/octet-stream" sparkle:edSignature="CUTFNkLJ2zei1ZxOK3sW0OpE414Yu9NmhaJay4Rf62kAL0aiTbLAenMU4sRAyfShT4h53f2JDfhjN6Sj2q7EDQ=="/>
         </item>
     </channel>
 </rss>
