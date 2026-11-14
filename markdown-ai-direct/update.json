@@ -2,8 +2,8 @@
   "app": "markdown_ai",
   "channel": "direct_website",
   "version": "3.23.1",
-  "build": "20",
+  "build": "21",
   "download_url": "https://ps-downloads.productivitysurge.workers.dev/downloads/markdown-ai/Markdown_AI-v3.23.1.dmg",
   "appcast_url": "https://productivitysurge.com/markdown-ai-direct/appcast.xml",
-  "release_notes": "Markdown A.I. 3.23.1 starts Sparkle update checks at launch and uses internal Build 20 so Check for Updates correctly finds this release after 3.23.0."
+  "release_notes": "Markdown A.I. 3.23.1 starts Sparkle update checks at launch, packages the Direct license schema for reliable startup, and uses internal Build 21 so Check for Updates correctly finds this release after 3.23.0."
 }
