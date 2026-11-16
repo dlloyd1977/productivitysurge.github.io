@@ -1,9 +1,9 @@
 {
   "app": "markdown_ai",
   "channel": "direct_website",
-  "version": "3.24.0",
-  "build": "23",
-  "download_url": "https://ps-downloads.productivitysurge.workers.dev/downloads/markdown-ai/Markdown_AI-v3.24.0.dmg",
+  "version": "3.25.2",
+  "build": "24",
+  "download_url": "https://ps-downloads.productivitysurge.workers.dev/downloads/markdown-ai/Markdown_AI-v3.25.2.dmg",
   "appcast_url": "https://productivitysurge.com/markdown-ai-direct/appcast.xml",
-  "release_notes": "Markdown A.I. 3.24.0 adds Closing In Progress quit feedback and light-theme readability fixes. Internal Build 23 so Check for Updates finds this release after Build 22."
+  "release_notes": "Markdown A.I. 3.25.2 restores every prior-session tab during Splash and reveals the last-active tab first when restore exceeds the threshold. Internal Build 24 so Check for Updates finds this release after Build 23."
 }
